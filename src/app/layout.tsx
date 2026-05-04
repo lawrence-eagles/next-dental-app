@@ -1,13 +1,8 @@
 import type { Metadata } from "next";
-import {
-  ClerkProvider,
-  Show,
-  SignInButton,
-  SignUpButton,
-  UserButton,
-} from "@clerk/nextjs";
+import { ClerkProvider } from "@clerk/nextjs";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Variable } from "lucide-react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,8 +29,20 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
-        <ClerkProvider>{children}</ClerkProvider>
+      <body className="min-h-full flex flex-col dark">
+        <ClerkProvider
+          appearance={{
+            variables: {
+              colorPrimary: "#e78a53",
+              colorBackground: "#f3f4f6",
+              colorText: "#111827",
+              colorTextSecondary: "#6b7280",
+              colorInputBackground: "#f3f4f6",
+            },
+          }}
+        >
+          {children}
+        </ClerkProvider>
       </body>
     </html>
   );
