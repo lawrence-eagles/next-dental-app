@@ -14,7 +14,7 @@ function CTA() {
           {/* Left content */}
           <div className="space-y-6">
             <div className="space-y-4">
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-linear-to-r from-primary/5 to-primary//10 rounded-full border border-primary/10">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-linear-to-r from-primary/5 to-primary/10 rounded-full border border-primary/10">
                 <div className="size-2 bg-primary rounded-full animate-pulse"></div>
                 <span className="text-xs font-medium">Ready When You Are</span>
               </div>
@@ -76,7 +76,7 @@ function CTA() {
                   alt="Next-dental-app AI Assistant"
                   width={300}
                   height={300}
-                  className="relative w-80 h-auto drop-shadow-xl hover:scale-105 transtion-transform duration-500"
+                  className="relative w-80 h-auto drop-shadow-xl hover:scale-105 transition-transform duration-500"
                   priority
                 />
               </div>

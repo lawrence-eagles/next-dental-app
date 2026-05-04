@@ -38,7 +38,7 @@ function Header() {
             </Button>
           </SignInButton>
           <SignUpButton mode="modal">
-            <Button size={"sm"}>Login</Button>
+            <Button size={"sm"}>Register</Button>
           </SignUpButton>
         </div>
       </div>

@@ -34,7 +34,7 @@ function PricingSection() {
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Book appointments for free and upgrade for unlimited AI
-            consultations. Perfect for ongooing dental care.
+            consultations. Perfect for ongoing dental care.
           </p>
         </div>
 
@@ -55,7 +55,7 @@ function PricingSection() {
                   </p>
                 </div>
                 <SignUpButton mode="modal">
-                  <Button className="w-full py-3 bg-linear-to-r from-muted to-muted-80 text-foreground rounded-xl font-semibold">
+                  <Button className="w-full py-3 bg-linear-to-r from-muted to-muted/80 text-foreground rounded-xl font-semibold">
                     Get Started Free
                   </Button>
                 </SignUpButton>
@@ -108,9 +108,11 @@ function PricingSection() {
                   </p>
                 </div>
 
-                <Button className="w-full py-3 bg-linear-to-r from-primary to-primary/90 hover:from-primary/95 hover:to-primary/85 text-primary-foreground rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
-                  Start AI Basic
-                </Button>
+                <SignUpButton mode="modal">
+                  <Button className="w-full py-3 bg-linear-to-r from-primary to-primary/90 hover:from-primary/95 hover:to-primary/85 text-primary-foreground rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
+                    Start AI Basic
+                  </Button>
+                </SignUpButton>
 
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
@@ -157,12 +159,14 @@ function PricingSection() {
                   </p>
                 </div>
 
-                <Button
-                  variant={"outline"}
-                  className="w-full py-3 border-2 border-primary/20 hover:border-primary/40 hover:bg-primary/5 rounded-xl font-semibold transition-all duration-300"
-                >
-                  Upgrade to AI Pro
-                </Button>
+                <SignUpButton mode="modal">
+                  <Button
+                    variant={"outline"}
+                    className="w-full py-3 border-2 border-primary/20 hover:border-primary/40 hover:bg-primary/5 rounded-xl font-semibold transition-all duration-300"
+                  >
+                    Upgrade to AI Pro
+                  </Button>
+                </SignUpButton>
 
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
@@ -171,7 +175,7 @@ function PricingSection() {
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircleIcon className="size-5 text-primary mt-0.5 shrink-0" />
-                    <span className="text-sm">Unimited AI voice calls</span>
+                    <span className="text-sm">Unlimited AI voice calls</span>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircleIcon className="size-5 text-primary mt-0.5 shrink-0" />

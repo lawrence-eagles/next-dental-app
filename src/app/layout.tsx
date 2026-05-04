@@ -32,7 +32,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col dark">
         <ClerkProvider
           appearance={{
-            Variables: {
+            variables: {
               colorPrimary: "#e78a53",
               colorBackground: "#f3f4f6",
               colorText: "#111827",

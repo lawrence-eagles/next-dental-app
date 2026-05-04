@@ -27,7 +27,7 @@ function HowItWorks() {
 
         <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
           Our streamlined process makes dental care accessible, convenient, and
-          stree-free for everyone.
+          stress-free for everyone.
         </p>
       </div>
 
@@ -61,13 +61,13 @@ function HowItWorks() {
               </h3>
               <p className="text-muted-foreground text-center leading-relaxed mb-6">
                 Chat with our AI assistant about any dental concerns. Get
-                instant answers about symtoms, treatment, and oral health tips.
+                instant answers about symptoms, treatment, and oral health tips.
               </p>
 
               {/* Feature Pills */}
               <div className="flex flex-wrap gap-2 justify-center">
                 <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">
-                  24/7 Avialable
+                  24/7 Available
                 </span>
                 <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">
                   Instant Response
