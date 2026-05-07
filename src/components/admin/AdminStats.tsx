@@ -22,6 +22,10 @@ function AdminStats({
             <div className="size-12 bg-linear-to-br from-primary/20 to-primary/10 rounded-xl flex items-center justify-center">
               <Users className="size-6" />
             </div>
+            <div>
+              <div className="text-2xl font-bold">{totalDoctors}</div>
+              <div className="text-sm text-muted-foreground">Total Doctors</div>
+            </div>
           </div>
         </CardContent>
       </Card>

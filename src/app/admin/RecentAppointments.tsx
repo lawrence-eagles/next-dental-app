@@ -26,7 +26,7 @@ const RecentAppointments = () => {
   const updateAppointmentMutation = useUpdateAppointmentStatus();
 
   const handleToggleAppointmentStatus = (appointmentId: string) => {
-    const appointment = appointments.find((apt) => apt.it === appointmentId);
+    const appointment = appointments.find((apt) => apt.id === appointmentId);
 
     const newStatus =
       appointment?.status === "CONFIRMED" ? "COMPLETED" : "CONFIRMED";

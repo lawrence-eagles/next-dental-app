@@ -7,7 +7,8 @@ import { auth } from "@clerk/nextjs/server";
 function transformAppointment(appointment: any) {
   return {
     ...appointment,
-    patientName: `${appointment.user.firstName || ""} ${appointment.user.lastName || ""}.trim()`,
+    patientName:
+      `${appointment.user.firstName || ""} ${appointment.user.lastName || ""}`.trim(),
     patientEmail: appointment.user.email,
     doctorName: appointment.doctor.name,
     doctorImageUrl: appointment.doctor.imageUrl || "",
@@ -58,7 +59,7 @@ export async function getUserAppointments() {
     const appointments = await prisma.appointment.findMany({
       where: { userId: user.id },
       include: {
-        user: { select: { firstname: true, lastName: true, email: true } },
+        user: { select: { firstName: true, lastName: true, email: true } },
         doctor: { select: { name: true, imageUrl: true } },
       },
       orderBy: [{ date: "asc" }, { time: "asc" }],
@@ -183,7 +184,7 @@ export async function bookAppointment(input: BookAppointmentInput) {
   }
 }
 
-export async function updateAppointmentStats(Input: {
+export async function updateAppointmentStatus(Input: {
   id: string;
   status: AppointmentStatus;
 }) {

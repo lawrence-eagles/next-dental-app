@@ -177,6 +177,7 @@ const AddDoctorDialog = ({ isOpen, onClose }: AddDoctorDialogProps) => {
             disabled={
               !newDoctor.name ||
               !newDoctor.email ||
+              !newDoctor.phone ||
               !newDoctor.speciality ||
               createDoctorMutation.isPending
             }

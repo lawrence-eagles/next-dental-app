@@ -103,6 +103,8 @@ export async function updateDoctor(input: UpdateDoctorInput) {
       },
     });
 
+    revalidatePath("/admin");
+
     return doctor;
   } catch (error) {
     console.error("Error updating doctor:", error);

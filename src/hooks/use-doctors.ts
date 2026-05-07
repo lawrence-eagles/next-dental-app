@@ -39,7 +39,7 @@ export function useUpdateDoctor() {
     mutationFn: updateDoctor,
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["getDoctors"] });
-      queryClient.invalidateQueries({ queryKey: ["getAvailabledoctors"] });
+      queryClient.invalidateQueries({ queryKey: ["getAvailableDoctors"] });
     },
     onError: (error) => console.error("Failed to update doctor:", error),
   });
@@ -51,4 +51,6 @@ export function useAvailableDoctors() {
     queryKey: ["getAvailableDoctors"],
     queryFn: getAvailableDoctors,
   });
+
+  return result;
 }
