@@ -1,4 +1,3 @@
-import React from "react";
 import { Button } from "../ui/button";
 import { CalendarIcon, MicIcon } from "lucide-react";
 import Image from "next/image";

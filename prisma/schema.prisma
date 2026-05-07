@@ -3,6 +3,10 @@
 
 // Get a free hosted Postgres database in seconds: `npx create-db`
 
+// npx prisma migrate dev
+// npx prisma migrate reset
+// npx prisma migrate dev --name init
+
 generator client {
   provider = "prisma-client"
   output   = "../src/generated/prisma"
@@ -38,7 +42,7 @@ model Doctor {
  email String @unique
  phone String
  speciality String
- bio String
+ bio String?
  imageUrl String
  gender Gender
  isActive Boolean @default(true)
