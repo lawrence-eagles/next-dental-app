@@ -5,7 +5,7 @@ import {
   getAppointments,
   getBookedTimeSlots,
   getUserAppointments,
-  updateAppointmentStats,
+  updateAppointmentStatus,
 } from "@/lib/actions/appointments";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 
@@ -54,7 +54,7 @@ export function useUpdateAppointmentStatus() {
   const queryClient = useQueryClient();
 
   return useMutation({
-    mutationFn: updateAppointmentStats,
+    mutationFn: updateAppointmentStatus,
     onSuccess: () => {
       queryClient.invalidateQueries({
         queryKey: ["getAppointments"],
