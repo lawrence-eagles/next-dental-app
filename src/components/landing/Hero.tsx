@@ -1,5 +1,5 @@
 import { SignUpButton } from "@clerk/nextjs";
-import { CalendarIcon, MicIcon, StarIcon } from "lucide-react";
+import { CalendarIcon, MicIcon, StarIcon, Voicemail } from "lucide-react";
 import { Button } from "../ui/button";
 import Image from "next/image";
 
@@ -31,15 +31,15 @@ function Hero() {
 
                 {/* Main Heading */}
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
-                  <span className="bg-gradient-to-br from-foreground via-foreground to-foreground/70 bg-clip-text text-transparent">
+                  <span className="bg-linear-to-br from-foreground via-foreground to-foreground/70 bg-clip-text text-transparent">
                     Your dental
                   </span>
                   <br />
-                  <span className="bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+                  <span className="bg-linear-to-r from-primary to-primary/70 bg-clip-text text-transparent">
                     questions
                   </span>
                   <br />
-                  <span className="bg-gradient-to-br from-foreground via-foreground to-foreground/70 bg-clip-text text-transparent">
+                  <span className="bg-linear-to-br from-foreground via-foreground to-foreground/70 bg-clip-text text-transparent">
                     answered instantly
                   </span>
                 </h1>
@@ -56,7 +56,7 @@ function Hero() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <SignUpButton mode="modal">
                   <Button size={"lg"}>
-                    <MicIcon className="mr-2 size-5" />
+                    <Voicemail className="mr-2 size-5" />
                     Try voice agent
                   </Button>
                 </SignUpButton>
