@@ -16,7 +16,7 @@ const ProPlanRequired = () => {
           <div className="bg-linear-to-br from-primary/10 via-primary/5 to-background rounded-3xl p-8 border border-primary/20">
             <div className="relative z-10 flex items-center justify-between">
               <div className="space-y-4">
-                <div className="inline-flex items-cener gap-2 px-3 py-1 bg-primary/10 rounded-full border border-primary/20">
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 rounded-full border border-primary/20">
                   <LockIcon className="size-4 text-primary" />
                   <span className="text-sm font-medium text-primary">
                     Pro Feature

@@ -93,7 +93,11 @@ const VapiWidget = () => {
         setMessages([]);
         setCallEnded(false);
 
-        await vapi.start(process.env.NEXT_PUBLIC_VAPI_ASSISTANT_ID);
+        const assistantId = process.env.NEXT_PUBLIC_VAPI_ASSISTANT_ID;
+        if (!assistantId) {
+          throw new Error("Missing NEXT_PUBLIC_VAPI_ASSISTANT_ID");
+        }
+        await vapi.start(assistantId);
       } catch (error) {
         console.error("FAiled to start call", error);
         setConnecting(false);
@@ -194,7 +198,7 @@ const VapiWidget = () => {
             {/* User Image */}
             <div className="relative size-32 mb-4">
               <Image
-                src={user?.imageUrl}
+                src={user?.imageUrl!}
                 alt="User"
                 width={128}
                 height={128}
@@ -233,7 +237,7 @@ const VapiWidget = () => {
                 className="message-item animate-in fade-in duration-300"
               >
                 <div className="font-semibold text-xs text-muted-foreground mb-1">
-                  {msg.role === "assistand" ? "Next-Dental-App AI" : "You"}:
+                  {msg.role === "assistant" ? "Next-Dental-App AI" : "You"}:
                 </div>
                 <p className="text-foreground">{msg.content}</p>
               </div>
@@ -258,7 +262,7 @@ const VapiWidget = () => {
         <Button
           className={`w-44 text-xl rounded-3xl ${callActive ? "bg-destructive hover:bg-destructive/90" : callEnded ? "bg-red-500 hover:bg-red-700" : "bg-primary hover:bg-primary/90"} text-white relative`}
           onClick={toggleCall}
-          disabled={connecting || callEnded}
+          disabled={connecting}
         >
           {connecting && (
             <span className="absolute inset-0 rounded-full animate-ping bg-primary/50 opacity-75"></span>
