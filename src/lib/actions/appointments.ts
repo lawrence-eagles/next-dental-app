@@ -129,7 +129,7 @@ export async function getBookedTimeSlots(doctorId: string, date: string) {
 }
 
 interface BookAppointmentInput {
-  doctorId: string;
+  doctorId: string | null;
   date: string;
   time: string;
   reason?: string;

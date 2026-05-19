@@ -1,9 +1,9 @@
 import { auth } from "@clerk/nextjs/server";
-import ProPlanRequired from "./ProPlanRequired";
+import ProPlanRequired from "../../components/voice/ProPlanRequired";
 import Navbar from "@/components/Navbar";
-import WelcomeSection from "./WelcomeSection";
-import FeatureCards from "./FeatureCards";
-import VapiWidget from "./VapiWidget";
+import WelcomeSection from "../../components/voice/WelcomeSection";
+import FeatureCards from "../../components/voice/FeatureCards";
+import VapiWidget from "../../components/voice/VapiWidget";
 
 const VoicePage = async () => {
   const { has } = await auth();
