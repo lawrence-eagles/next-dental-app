@@ -14,7 +14,7 @@ import {
 } from "../ui/dialog";
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "../ui/button";
+import { Button, buttonVariants } from "../ui/button";
 
 interface AppointmentConfirmationModalProps {
   open: boolean;
@@ -85,7 +85,7 @@ const AppointmentConfirmationModal = ({
               <div className="space-y-2">
                 <div className="flex items-center gap-3 text-sm">
                   <UserIcon className="size-2 text-muted-foreground" />
-                  <span className="font-mdeium">
+                  <span className="font-medium">
                     {appointmentDetails.doctorName}
                   </span>
                 </div>
@@ -105,10 +105,18 @@ const AppointmentConfirmationModal = ({
 
           {/* Action Buttons */}
           <div className="flex flex-col gap-3">
-            <Link href={"/appointments"} className="w-full">
+            {/* <Link href={"/appointments"} className="w-full">
               <Button className="w-full" onClick={() => onOpenChange(false)}>
                 View My Appointments
               </Button>
+            </Link> */}
+
+            <Link
+              href={"/appointments"}
+              className={buttonVariants({ className: "w-full" })}
+              onClick={() => onOpenChange(false)}
+            >
+              View My Appointments
             </Link>
 
             <Button

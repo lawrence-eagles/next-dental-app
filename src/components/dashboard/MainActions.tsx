@@ -96,7 +96,7 @@ const MainActions = () => {
             </div>
           </div>
 
-          <Link href={"/appointments"}>
+          {/* <Link href={"/appointments"}>
             <Button
               variant={"outline"}
               className="w-full mt-6 border-2 border-primary/20 hover:border-primary/40 hover:bg primary/5 font-semibold py-3 rounded-xl transition-all duration-300"
@@ -104,7 +104,17 @@ const MainActions = () => {
               <CalendarIcon className="mr-2 size-5" />
               Schedule Now
             </Button>
-          </Link>
+          </Link> */}
+          <Button
+            asChild
+            variant={"outline"}
+            className="w-full mt-6 border-2 border-primary/20 hover:border-primary/40 hover:bg-primary/5 font-semibold py-3 rounded-xl transition-all duration-300"
+          >
+            <Link href={"/appointments"}>
+              <CalendarIcon className="mr-2 size-5" />
+              Schedule Now
+            </Link>
+          </Button>
         </CardContent>
       </Card>
     </div>

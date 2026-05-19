@@ -9,13 +9,17 @@ const NextAppointment = async () => {
 
   // filter for upcoming confirmed appointments only (today or future)
   const upcomingAppointments =
-    appointments?.filter((appointment) => {
-      const appointmentDate = parseISO(appointment.date);
-      const today = new Date();
-      const isUpcoming =
-        isSameDay(appointmentDate, today) || isAfter(appointmentDate, today);
-      return isUpcoming && appointment.status === "CONFIRMED";
-    }) || [];
+    appointments
+      ?.filter((appointment) => {
+        const appointmentDate = parseISO(appointment.date);
+        const today = new Date();
+        const isUpcoming =
+          isSameDay(appointmentDate, today) || isAfter(appointmentDate, today);
+        return isUpcoming && appointment.status === "CONFIRMED";
+      })
+      .sort(
+        (a, b) => parseISO(a.date).getTime() - parseISO(b.date).getTime(),
+      ) || [];
 
   // get the next appointment (earliest upcoming one)
   const nextAppointment = upcomingAppointments[0];
@@ -55,7 +59,9 @@ const NextAppointment = async () => {
               <UserIcon className="size-4 text-primary" />
             </div>
             <div>
-              <p className="font-medium text-s">{nextAppointment.doctorName}</p>
+              <p className="font-medium text-sm">
+                {nextAppointment.doctorName}
+              </p>
               <p className="text-xs text-muted-foreground">
                 {nextAppointment.reason}
               </p>
@@ -68,7 +74,7 @@ const NextAppointment = async () => {
             </div>
             <div>
               <p className="font-medium text-sm">{formattedDate}</p>
-              <p className="text-xs text-muted-foregroung">
+              <p className="text-xs text-muted-foreground">
                 {isToday ? "Today" : format(appointmentDate, "EEEE")}
               </p>
             </div>
@@ -88,7 +94,7 @@ const NextAppointment = async () => {
         {/* More Appointments count */}
         {upcomingAppointments.length > 1 && (
           <p className="text-xs text-center text-muted-foreground">
-            +{upcomingAppointments.length - 1} more upcoming appoointment
+            +{upcomingAppointments.length - 1} more upcoming appointment
             {upcomingAppointments.length > 2 ? "s" : ""}
           </p>
         )}

@@ -43,6 +43,15 @@ const DoctorSelectionStep = ({
             key={dentist.id}
             className={`cursor-pointer transition-all hover:shadow-lg ${selectedDentistId === dentist.id ? "ring-2 ring-primary" : ""}`}
             onClick={() => onSelectDentist(dentist.id)}
+            role="button"
+            tabIndex={0}
+            aria-pressed={selectedDentistId === dentist.id}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                onSelectDentist(dentist.id);
+              }
+            }}
           >
             <CardHeader className="pb-4">
               <div className="flex items-start gap-4">

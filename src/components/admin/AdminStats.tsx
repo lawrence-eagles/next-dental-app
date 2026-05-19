@@ -32,7 +32,7 @@ function AdminStats({
 
       <Card className="border-2 hover:border-primary/30 transition-all duration-300">
         <CardContent className="p-6">
-          <div className="flex items center gap-4">
+          <div className="flex items-center gap-4">
             <div className="size-12 bg-linear-to-br from-primary/20 to-primary/10 rounded-xl flex items-center justify-center">
               <UserCheck className="size-6" />
             </div>

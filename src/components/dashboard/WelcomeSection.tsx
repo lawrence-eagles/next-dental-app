@@ -21,7 +21,7 @@ const WelcomeSection = async () => {
               : new Date().getHours() < 18
                 ? "afternoon"
                 : "evening"}
-            , {user?.firstName}!
+            , {user?.firstName ?? "Hello there"}!
           </h1>
           <p className="text-muted-foreground">
             Your personal AI dental assistant is ready to help you maintain

@@ -181,7 +181,7 @@ const AppointmentsPage = () => {
                 key={appointment.id}
                 className="bg-card border rounded-lg p-4 shadow-sm"
               >
-                <div className="flex items-center gap-3 mb-e">
+                <div className="flex items-center gap-3 mb-3">
                   <div className="size-10 bg-primary/10 rounded-full flex items-center justify-center">
                     <img
                       src={appointment.doctorImageUrl}

@@ -67,6 +67,15 @@ const TimeSelectionStep = ({
                 key={type.id}
                 className={`cursor-pointer transition-all hover:shadow-sm ${selectedType === type.id ? "ring-2 ring-primary" : ""}`}
                 onClick={() => onTypeChange(type.id)}
+                role="button"
+                tabIndex={0}
+                aria-pressed={selectedType === type.id}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    onTypeChange(type.id);
+                  }
+                }}
               >
                 <CardContent className="p-4">
                   <div className="flex justify-between items-center">

@@ -35,7 +35,7 @@ const BookingConfirmationStep = ({
           <ChevronLeftIcon className="size-4 mr-2" />
           Back
         </Button>
-        <h2 className="text-2xl font-semibold">Confirm Your Apppointment</h2>
+        <h2 className="text-2xl font-semibold">Confirm Your Appointment</h2>
       </div>
 
       <Card className="max-w-2xl">
@@ -89,7 +89,7 @@ const BookingConfirmationStep = ({
       {/* action buttons */}
       <div className="flex gap-4">
         <Button variant={"outline"} onClick={onModify}>
-          Modify Appointment``
+          Modify Appointment
         </Button>
         <Button onClick={onConfirm} className="bg-primary" disabled={isBooking}>
           {isBooking ? "Booking..." : "Confirm Booking"}

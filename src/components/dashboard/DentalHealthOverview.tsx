@@ -15,6 +15,9 @@ import Link from "next/link";
 const DentalHealthOverview = async () => {
   const appointmentStats = await getUserAppointmentStats();
   const user = await currentUser();
+  const memberSince = user?.createdAt
+    ? format(new Date(user.createdAt), "MMM yyyy")
+    : "—";
 
   return (
     <Card className="lg:col-span-2">
@@ -49,7 +52,8 @@ const DentalHealthOverview = async () => {
           </div>
           <div className="text-center p-4 bg-muted/30 rounded-xl">
             <div className="text-2xl font-bold text-primary mb-1">
-              {format(new Date(user?.createdAt!), "MMM yyyy")}
+              {/* {format(new Date(user?.createdAt!), "MMM yyyy")} */}
+              {memberSince}
             </div>
             <div className="text-sm text-muted-foreground">Member Since</div>
           </div>
