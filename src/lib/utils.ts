@@ -61,7 +61,7 @@ export const getAvailableTimeSlots = () => {
 
 export const APPOINTMENT_TYPES = [
   { id: "checkup", name: "Regular Checkup", duration: "60 min", price: "$120" },
-  { id: "cleaning", name: "Teetch cleaning", duration: "45 min", price: "$90" },
+  { id: "cleaning", name: "Teeth cleaning", duration: "45 min", price: "$90" },
   {
     id: "consultation",
     name: "Consultation",
