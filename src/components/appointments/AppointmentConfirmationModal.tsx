@@ -105,12 +105,6 @@ const AppointmentConfirmationModal = ({
 
           {/* Action Buttons */}
           <div className="flex flex-col gap-3">
-            {/* <Link href={"/appointments"} className="w-full">
-              <Button className="w-full" onClick={() => onOpenChange(false)}>
-                View My Appointments
-              </Button>
-            </Link> */}
-
             <Link
               href={"/appointments"}
               className={buttonVariants({ className: "w-full" })}
