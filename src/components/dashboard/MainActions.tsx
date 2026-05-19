@@ -95,16 +95,6 @@ const MainActions = () => {
               <span className="text-sm">Instant confirmations</span>
             </div>
           </div>
-
-          {/* <Link href={"/appointments"}>
-            <Button
-              variant={"outline"}
-              className="w-full mt-6 border-2 border-primary/20 hover:border-primary/40 hover:bg primary/5 font-semibold py-3 rounded-xl transition-all duration-300"
-            >
-              <CalendarIcon className="mr-2 size-5" />
-              Schedule Now
-            </Button>
-          </Link> */}
           <Button
             asChild
             variant={"outline"}
